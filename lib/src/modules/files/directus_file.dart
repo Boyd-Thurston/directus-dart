@@ -105,10 +105,10 @@ class DirectusFile {
   Object? modifiedBy;
   DateTime? modifiedOn;
   String? charset;
-  int? filesize;
-  int? width;
-  int? height;
-  int? duration;
+  String? filesize;
+  String? width;
+  String? height;
+  String? duration;
   String? embed;
   String? description;
   String? location;
