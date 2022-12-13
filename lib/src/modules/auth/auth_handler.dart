@@ -175,9 +175,9 @@ class AuthHandler with StaticToken {
     try {
       final response = await manuallyRefresh();
       if (response?.accessToken != null) {
-        options.headers['Authorization'] = response!.accessToken;
+        options.headers['authorization'] = 'Bearer ${response!.accessToken}';
       } else {
-        options.headers.remove('Authorization');
+        options.headers.remove('authorization');
       }
     } on DirectusError catch (e) {
       return handler.reject(e.dioError!);
