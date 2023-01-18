@@ -1,3 +1,32 @@
+# 0.9.3
+
+- Enable passing map to filter
+
+# 0.9.2
+
+- Fix `directus` not exporting core
+
+# 0.9.1
+
+- Fix case when user can create, but can't read
+
+# 0.9.0
+
+- Split directus and directus_core
+
+# 0.8.2
+
+- Pub analysis fixes
+
+# 0.8.1
+
+- Fix license
+
+# 0.8.0
+
+- Switched to monorepo
+- Bug fixes
+
 # 0.7.2
 
 - Fix logout not working
