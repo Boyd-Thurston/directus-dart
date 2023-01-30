@@ -146,9 +146,9 @@ class AuthHandler with StaticToken {
     _tokens = data;
 
     if (data == null) {
-      client.options.headers.remove('authorization');
+      client.options.headers.remove('Authorization');
     } else {
-      client.options.headers['authorization'] = 'Bearer ${data.accessToken}';
+      client.options.headers['Authorization'] = 'Bearer ${data.accessToken}';
     }
   }
 
@@ -175,9 +175,9 @@ class AuthHandler with StaticToken {
     try {
       final response = await manuallyRefresh();
       if (response?.accessToken != null) {
-        options.headers['authorization'] = 'Bearer ${response!.accessToken}';
-      } else {        
-        options.headers.remove('authorization');
+        options.headers['Authorization'] = 'Bearer ${response!.accessToken}';
+      } else {
+        options.headers.remove('Authorization');
       }
     } on DirectusError catch (e) {
       return handler.reject(e.dioError!);
